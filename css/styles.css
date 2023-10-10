@@ -1,0 +1,477 @@
+@charset "UTF-8";
+@import "base.css";
+@import "fonts.css";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea,
+select,
+p,
+blockquote,
+th,
+td,
+pre,
+address,
+li,
+dt,
+dd {
+    font-size: 140%;
+}
+
+img {
+    vertical-align: bottom;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: #195CB1;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+table {
+    width: 100%
+}
+
+p {
+    margin: 0 0 1.5em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+p,
+dd,
+td,
+th,
+li {
+    line-height: 1.3em;
+}
+
+/*=============================G L O B A L=============================*/
+
+html {
+    background: none;
+}
+
+body {
+    color: #333;
+    -webkit-text-size-adjust: none;
+    min-width: 320px;
+    font-family: 'SVN-Gotham Book';
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+#wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vw / 9 * 16);
+    min-height: 100vh;
+    position: relative;
+    background: #000;
+}
+
+#screen-1 {
+    padding: 9.2vw 12.5%;
+    /*background: url('../images/bg-1.png') center top / 172.9% no-repeat #081407;*/
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10%) scale(0.8);
+    filter: blur(5px);
+    transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#screen-1.show {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+    filter: blur(0px);
+}
+
+.intro-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+ul.languages {
+    display: flex;
+    padding: 0 5%;
+    margin-top: 7.5vw;
+    margin-bottom: 10.5vw;
+}
+
+ul.languages li {
+    width: calc((100% - 8vw) / 2);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+
+ul.languages li:first-child {
+    margin-right: 8vw;
+    letter-spacing: 0.1em;
+}
+
+.txt-direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 4.1vw;
+    text-align: center;
+    line-height: 1.34em;
+}
+
+.txt-direction > span {
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 0.5vw 0;
+}
+
+.txt-direction > span > span {
+    font-size: 107%;
+}
+
+#screen-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081407;
+    z-index: 2;
+    padding: 3vw 10.5%;
+    overflow: hidden;
+    filter: blur(50px);
+    transform: scale(0.8) translateY(10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#screen-2.open {
+    filter: blur(0px);
+    transform: scale(1) translateY(0%);
+    opacity: 1;
+    visibility: visible;
+}
+/*
+#screen-2:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-2.png) center top / 100% auto no-repeat;
+    position: absolute;
+    z-index: -1;
+    left: 55%;
+    top: -37vw;
+}
+
+#screen-2:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-2.png) center bottom / 100% auto no-repeat;
+    position: absolute;
+    z-index: -1;
+    left: -53%;
+    bottom: -28vw;
+}*/
+
+.logo {
+    text-align: center;
+    padding: 0 29vw;
+    margin-bottom: 2vw;
+}
+
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: 'SVN-Gotham-Bold';
+    font-size: 4vw;
+    margin-bottom: 6vw;
+}
+
+.content-txt {
+    color: #fff;
+    text-align: justify;
+    font-size: 2.2vw;
+    line-height: 1.3em;
+    margin-bottom: 1vw;
+}
+
+.content-txt .block {
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.list-place {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -2.2vw;
+}
+
+.list-place li {
+    width: calc((100% - 9vw) / 3);
+    margin: 1vw;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'SVN-Gotham-Bold';
+    font-size: 1.9vw;
+}
+
+.list-place li .img {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 87%;
+    margin-bottom: -1.8em;
+    background: #4C843D;
+    padding: 0.5vw;
+}
+
+.list-place li .img:before {
+    content: "";
+    width: 100%;
+    height: 60%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+}
+
+.list-place li .ttl {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+
+#screen-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081407;
+    z-index: 3;
+    padding: 6.9vw 8%;
+    overflow: hidden;
+    filter: blur(50px);
+    transform: scale(0.8) translateY(-10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#screen-3.open {
+    filter: blur(0px);
+    transform: scale(1) translateY(0%);
+    opacity: 1;
+    visibility: visible;
+}
+/*
+#screen-3:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('../images/bg-3.png') center top / 120% no-repeat;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -55%;
+}
+
+#screen-3:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('../images/bg-4.png') center bottom / 146% no-repeat;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -39%;
+}*/
+
+#screen-3 .content-txt {
+    font-size: 2.3vw;
+}
+
+.button {
+    font-size: 4vw;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'SVN-Gotham-Bold';
+    letter-spacing: 0.01em;
+}
+
+.button span {
+    display: inline-block;
+    padding: 0.5em 2.7em 0.7em;
+    background: #28572a;
+    border-radius: 0.5em;
+    line-height: 1em;
+}
+
+.slider {
+    margin: 10vw 0 15vw;
+}
+
+.slider li {
+    padding: 0 1vw;
+}
+
+.slider li img {
+    width: 100%;
+}
+
+.place-detail {
+    display: none;
+}
+
+.place-detail.open {
+    display: block;
+}
+
+.btn-close {
+    position: fixed;
+    z-index: 1;
+    top: 7vw;
+    right: 8vw;
+    width: 6vw;
+    height: 6vw;
+    margin: 0;
+}
+
+.btn-close:before {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 4vw;
+    transform: rotateZ(45deg);
+    position: absolute;
+    left: 0;
+    top: 39%;
+    background: #29562A;
+}
+
+.btn-close:after {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 4vw;
+    transform: rotateZ(-45deg);
+    position: absolute;
+    right: 0;
+    top: 39%;
+    background: #29562A;
+}
+
+
+.languages li,
+.btn-close,
+.list-place li,
+.button span {
+    cursor: pointer;
+}
+
+#wrapper.en .txt-vi {
+    display: none;
+}
+
+#wrapper.vi .txt-en {
+    display: none;
+}
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+.slick-prev, .slick-next {
+    background: transparent !important;
+    width: 5vw;
+    height: 5vw;
+}
+
+.slick-prev {
+    left: -5.5vw;
+}
+
+.slick-next {
+    right: -5.5vw;
+}
+
+.slick-prev:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-left: solid 1vw #1F5926;
+    border-bottom: solid 1vw #1F5926;
+    transform: rotateZ(45deg);
+    position: absolute;
+    left: 28%;
+    top: 11%;
+    box-sizing: border-box;
+}
+
+.slick-next:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-right: solid 1vw #1F5926;
+    border-bottom: solid 1vw #1F5926;
+    transform: rotateZ(-45deg);
+    position: absolute;
+    left: 0%;
+    top: 11%;
+    box-sizing: border-box;
+}
+
+.txt-intro {
+    color: #fff;
+    font-family: 'SVN-Gotham-Bold';
+    margin: 108vw -9vw 0;
+    text-align: center;
+    font-size: 3.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-intro span:nth-child(2) {
+    font-size: 70%;
+}
+
+video {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: calc(100vw / 9 * 16);
+}

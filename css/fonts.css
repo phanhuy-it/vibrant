@@ -1,0 +1,71 @@
+
+body {
+	font:arial, sans-serif;
+	color: #333;
+	line-height: 1.4;
+}
+html>/**/body { font-size: 10px; font-size /*\**/: 62.5%\9; } /* Except IE & Add IE8 */
+
+/**
+ * Nudge down to get to 10px equivalent for these form elements
+ */ 
+select,input,button,textarea {
+	font: 100% arial, sans-serif;
+	color: #333;
+	line-height: 1.4;
+}
+
+/**
+ * To help tables remember to inherit
+ */
+table { font-size:inherit; font: 100%; color: #333; line-height: 1.4; }
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre,code,kbd,samp,tt { font-family:monospace; font-size: 100%; *font-size:108%; line-height: 1.4; color: #333; }
+
+/* Font-size fixed */
+li li,li dt,li dd,li input,li select,li button,li textarea,li p,li th,li td,
+dt li,dt dt,dt dd,dt input,dt select,dt button,dt textarea,dt p,dt th,dt td,
+dd li,dd dt,dd dd,dd input,dd select,dd button,dd textarea,dd p,dd th,dd td,
+th li,th dt,th dd,th input,th select,th button,th textarea,th p,th th,th td,
+td li,td dt,td dd,td input,td select,td button,td textarea,td p,td th,td td,
+p input{ font-size: 100%; }
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('../fonts/SVN-Gotham.eot');
+    src: url('../fonts/SVN-Gotham.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-Gotham.woff2') format('woff2'),
+        url('../fonts/SVN-Gotham.woff') format('woff'),
+        url('../fonts/SVN-Gotham.ttf') format('truetype'),
+        url('../fonts/SVN-Gotham.svg#SVN-Gotham') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Book';
+    src: url('../fonts/SVN-GothamBook.eot');
+    src: url('../fonts/SVN-GothamBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-GothamBook.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBook.woff') format('woff'),
+        url('../fonts/SVN-GothamBook.ttf') format('truetype'),
+        url('../fonts/SVN-GothamBook.svg#SVN-GothamBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham-Bold';
+    src: url('../fonts/SVN-GothamBold.eot');
+    src: url('../fonts/SVN-GothamBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-GothamBold.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBold.woff') format('woff'),
+        url('../fonts/SVN-GothamBold.ttf') format('truetype'),
+        url('../fonts/SVN-GothamBold.svg#SVN-GothamBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
